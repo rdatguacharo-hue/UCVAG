@@ -20,15 +20,16 @@ jobs:
         with:
           node-version: "22"
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps --no-audit --no-fund
 
       - name: Build Android APK
         run: |
           cd android
-          ./gradlew assembleProdDebug -Pandroid.injected.build.abi=arm64-v8a --no-daemon
+          ./gradlew clean assembleProdDebug -Pandroid.injected.build.abi=arm64-v8a --no-daemon
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: app-prod-debug
+          name: pocketpal-device-test-apk-arm64
           path: android/app/build/outputs/apk/prod/debug/app-prod-debug.apk
+          if-no-files-found: error
