@@ -5,11 +5,11 @@ import React from 'react';
 import {Image} from 'react-native';
 import {observer} from 'mobx-react';
 
-import {OnboardingScaffold} from './components/OnboardingScaffold';
-import {OnboardingBottomBar} from './components/OnboardingBottomBar';
-import {OnboardingContent} from './components/OnboardingContent';
-import {ItalicAccentTitle} from './components/ItalicAccentTitle';
-import {HighlightText} from './components/HighlightText';
+import {OnboardingScaffold} from '../components/OnboardingScaffold';
+import {OnboardingBottomBar} from '../components/OnboardingBottomBar';
+import {OnboardingContent} from '../components/OnboardingContent';
+import {ItalicAccentTitle} from '../components/ItalicAccentTitle';
+import {HighlightText} from '../components/HighlightText';
 import {useOnboardingHandlers} from '../useOnboardingHandlers';
 
 export const Onboarding3Screen: React.FC = observer(() => {
