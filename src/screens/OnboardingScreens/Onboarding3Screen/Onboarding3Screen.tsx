@@ -10,7 +10,7 @@ import {OnboardingBottomBar} from './components/OnboardingBottomBar';
 import {OnboardingContent} from './components/OnboardingContent';
 import {ItalicAccentTitle} from './components/ItalicAccentTitle';
 import {HighlightText} from './components/HighlightText';
-import {useOnboardingHandlers} from './useOnboardingHandlers';
+import {useOnboardingHandlers} from '../useOnboardingHandlers';
 
 export const Onboarding3Screen: React.FC = observer(() => {
   const {next, goBack} = useOnboardingHandlers(3);
