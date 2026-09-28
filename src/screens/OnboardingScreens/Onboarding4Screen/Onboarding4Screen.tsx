@@ -5,13 +5,13 @@ import React from 'react';
 import {Image, View} from 'react-native';
 import {observer} from 'mobx-react';
 
-import {OnboardingScaffold} from './components/OnboardingScaffold';
-import {OnboardingBottomBar} from './components/OnboardingBottomBar';
-import {OnboardingContent} from './components/OnboardingContent';
-import {ItalicAccentTitle} from './components/ItalicAccentTitle';
-import {HighlightText} from './components/HighlightText';
-import {useOnboardingHandlers} from './useOnboardingHandlers';
-import {styles} from './styles';
+import {OnboardingScaffold} from '../components/OnboardingScaffold';
+import {OnboardingBottomBar} from '../components/OnboardingBottomBar';
+import {OnboardingContent} from '../components/OnboardingContent';
+import {ItalicAccentTitle} from '../components/ItalicAccentTitle';
+import {HighlightText} from '../components/HighlightText';
+import {useOnboardingHandlers} from '../useOnboardingHandlers';
+import {styles} from '../styles';
 
 export const Onboarding4Screen: React.FC = observer(() => {
   const {next, goBack} = useOnboardingHandlers(4);
@@ -22,7 +22,7 @@ export const Onboarding4Screen: React.FC = observer(() => {
       illustration={
         <View style={styles.illustrationWrap}>
           <Image
-            source={require('../../assets/onboarding_unica.png')}
+            source={require('../../../assets/onboarding_unica.png')}
             style={{width: 110, height: 110}}
             resizeMode="contain"
           />
